@@ -1,0 +1,13 @@
+---
+# tasks file for crons
+- name: "Setup crons for the host"
+  ansible.builtin.cron:
+    name: "{{ item.name }}"
+    minute: "{{ item.minute }}"
+    hour: "{{ item.hour }}"
+    weekday: "{{ item.weekday }}"
+    month: "{{ item.month }}"
+    day: "{{ item.day }}"
+    job: "{{ item.job }}"
+    user: "{{ item.user }}"
+  loop: "{{ host_crons }}"
