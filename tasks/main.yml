@@ -10,4 +10,5 @@
     day: "{{ item.day }}"
     job: "{{ item.job }}"
     user: "{{ item.user }}"
+    cron_file: "{{ item.name }}"
   loop: "{{ host_crons }}"

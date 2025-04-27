@@ -33,7 +33,7 @@ Here is an example of how to use this role in a playbook:
   roles:
     - role: cron
       host_crons:
-        - name: "Backup job"
+        - name: "backup_job"
           minute: "0"
           hour: "3"
           weekday: "*"
@@ -41,7 +41,7 @@ Here is an example of how to use this role in a playbook:
           day: "*"
           job: "/usr/local/bin/backup.sh"
           user: "root"
-        - name: "System cleanup"
+        - name: "system_cleanup"
           minute: "15"
           hour: "4"
           weekday: "1"
